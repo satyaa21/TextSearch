@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+		<script type="text/javascript" src="tparty/underscore.js"></script>
+		<script type="text/javascript" src="src/view.js"></script>
+		<script type="text/javascript" src="src/textSearchService.js"></script>
+		<script type="text/javascript" src="src/mainjs.js"></script>
+		<script type="text/javascript" src="src/resize.js"></script>
+		<script type="text/javascript" src="src/remove.js"></script>
+		<link rel="stylesheet" href="css/search.css"/>
+	</head>
+	<body onload="init()">
+		<div class="main-area">
+			<div class="container header-area"></div>
+			<div class="container search-area">
+				<input id="searchString_inp" value="Restauran" onchange="getSearchResults()"/>
+				<div class="search-filters">
+					<div class="checkbox">
+						<input type="checkbox" name="Filter" value="f1" />
+						<label>Filter-1</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="Filter" value="f2" />
+						<label>Filter-2</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="Filter" value="f3" />
+						<label>Filter-3</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="Filter" value="f4" />
+						<label>Filter-4</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="Filter" value="f5" />
+						<label>Filter-5</label>
+					</div>
+				</div>
+			</div>
+			<div class="container results-area" onmousedown="mouseDownHandler()">
+				<div id="map" calss="map-div"></div>
+				<div id="results" class="results-div" onmousedown="mouseDownHandler_result()"></div>
+			</div>
+			<div class="container footer-area">
+				<label>Declaimer: This page is under construction.</label>
+			</div>
+		</div>
+		<div id="remove-area" class="container remove-area" onmouseover="this.classList.add('hovered')" onmouseout="this.classList.remove('hovered')"></div>
+	</body>
+</html>
