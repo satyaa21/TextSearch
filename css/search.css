@@ -135,13 +135,13 @@ html,body{
 
 @media screen and (max-width: 1024px) {
 	.search-area{
-		width: auto;
+		width: auto!important;
 		bottom: auto;
 		height: 125px;
 	}
 	.results-area{
 		top: 185px;
-		left: 0px;
+		left: 0px!important;
 		border-width: 0px;
 	}
 }
@@ -152,7 +152,7 @@ html,body{
 		display: none;
 	}
 	.search-area{
-		width: auto;
+		width: auto!important;
 		bottom: auto;
 		height: 21px;
 		overflow: visible;
@@ -171,7 +171,7 @@ html,body{
 	}
 	.results-area{
 		top: 81px;
-		left: 0px;
+		left: 0px!important;
 		border-width: 0px;
 	}
 }
